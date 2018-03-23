@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="471.0" styleClass="gridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogInController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="129.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="185.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="45.0" prefWidth="160.0" styleClass="labels" text="Username" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Label prefHeight="40.0" prefWidth="162.0" styleClass="labels" text="Password" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <TextField fx:id="usernamePlaceHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <PasswordField fx:id="passwordPlaceHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="logInButton" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="137.0" styleClass="button" text="Sing in" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <ImageView fitHeight="114.0" fitWidth="269.0" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+         <image>
+            <Image url="@../Icons/HMS.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dbStatus" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Label fx:id="access" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+    <stylesheets>
+        <URL value="@styleLogIn" />
+    </stylesheets>
+</GridPane>

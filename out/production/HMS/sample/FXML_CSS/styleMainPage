@@ -1,0 +1,150 @@
+/*   MENU   */
+.menuBar{
+-fx-background-color: #050c0c;
+}
+.menu .label{
+-fx-text-fill: white;
+}
+.menu: hover{
+-fx-background-color: #1e65a7;
+}
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+.menu-bar .label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/*   LEFT PART   */
+.buttonsLeft{
+    -fx-font-size: 12pt;
+    -fx-background-radius: 0;
+    -fx-background-color: #132227;
+    -fx-text-fill: white;
+}
+.buttonsLeft: hover{
+    -fx-background-color: #525b56;
+}
+.vBoxLeft{
+-fx-background-color: #050c0c;
+}
+
+/*   GUESTS TRANSACTIONS   */
+.listLabel{
+    -fx-background-color: #132227;
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/*   SPLIT PANE PROPERTIES   */
+.split-pane {
+    -fx-padding: 2 0 0 0;
+    -fx-background-color: #050c0c;
+}
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: #132227;
+}
+
+/*   TABLES   */
+.columns{
+    -fx-font-size: 10pt;
+    -fx-font-weight: bold;
+}
+.table-view {
+    -fx-background-color: #525b56;
+    -fx-padding: 0 0 1 0;
+}
+.table-view .column-header .label {
+    -fx-background-color: #6b8a82;
+    -fx-text-fill: #050c0c;
+    -fx-padding: 1 1 1 1;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: #132227;
+}
+.table-row-cell{
+    -fx-border-color: #132227;
+    -fx-table-cell-border-color: #132227;
+}
+.table-view .column-header-background{
+    -fx-background-color: #6b8a82;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #050c0c;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #525b56;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #858c93;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+
+
+/*    NEW RESERVATION BUTTON   */
+.newReservation{
+    -fx-background-color: #132227;
+    -fx-border-color: #132227;
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.newReservation: hover{
+    -fx-background-color: #f3af5a;
+    -fx-border-color: #f3af5a;
+    -fx-text-fill: black;
+}
+
+/*   BOTTOM   */
+.bottomPart{
+    -fx-background-color: #050c0c;
+}
+.bottomButtons{
+    -fx-font-size: 10pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-background-color: #6b8a82;
+    -fx-border-color: #6b8a82;
+    -fx-background-insets: 0 0 0 0, 0, 1, 1;
+}
+.bottomButtons: hover{
+    -fx-background-color: #e5e23f;
+}
+#hBoxButtons{
+    -fx-background-color: #e5e23f;
+}
