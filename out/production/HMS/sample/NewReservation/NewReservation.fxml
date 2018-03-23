@@ -14,55 +14,66 @@
          <items>
             <GridPane alignment="TOP_CENTER" hgap="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="487.0" prefWidth="443.0">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="94.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="117.0" />
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="79.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="123.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="85.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="142.0" />
               </columnConstraints>
               <rowConstraints>
-                  <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="113.0" minHeight="0.0" prefHeight="56.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="80.0" minHeight="1.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.0" minHeight="0.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="35.0" prefWidth="92.0" styleClass="labels" text="Name" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="94.0" styleClass="labels" text="Surname" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="103.0" styleClass="labels" text="ID number" GridPane.rowIndex="2" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="99.0" styleClass="labels" text="Date of arrival" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="38.0" prefWidth="114.0" styleClass="labels" text="Time of arrival" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="94.0" styleClass="labels" text="Surname" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="103.0" styleClass="labels" text="Passport" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="99.0" styleClass="labels" text="Date of arrival" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="38.0" prefWidth="114.0" styleClass="labels" text="Time of arrival" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                      <GridPane.margin>
-                        <Insets bottom="7.0" />
+                        <Insets />
                      </GridPane.margin></Label>
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <DatePicker maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="16.0" prefWidth="122.0" promptText="HH:MM" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                  <TextField fx:id="nameField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" />
+                  <TextField fx:id="surnameField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="passportField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="dateOfArrivalPicker" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="timeOfArrivalFiled" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="16.0" prefWidth="122.0" promptText="HH:MM" styleClass="fieldsForData" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.valignment="CENTER">
                      <GridPane.margin>
-                        <Insets bottom="13.0" />
+                        <Insets />
                      </GridPane.margin></TextField>
-                  <Button alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Needs transfer" translateY="2.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="91.0" styleClass="labels" text="Nights to stay" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                  <ChoiceBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="138.0" GridPane.columnIndex="3" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="90.0" styleClass="labels" text="Credit Card" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="138.0" promptText="xxxx xxxx xxxx xxxxx" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="87.0" styleClass="labels" text="CVV" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="137.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="137.0" promptText="MM/YY" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="91.0" styleClass="labels" text="Date of Expire" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="100.0" styleClass="labels" text="Company" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-                  <TextField alignment="CENTER" maxWidth="137.0" minWidth="137.0" prefHeight="25.0" prefWidth="143.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="107.0" styleClass="labels" text="Contact number" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-                  <TextField alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="TOP" />
-                  <TextArea maxHeight="-Infinity" maxWidth="137.0" minHeight="-Infinity" minWidth="137.0" prefHeight="136.0" prefWidth="137.0" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.rowSpan="2" GridPane.valignment="TOP" />
-                  <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="63.0" prefWidth="88.0" styleClass="labels" text="Preferences" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-                     <GridPane.margin>
-                        <Insets top="5.0" />
-                     </GridPane.margin></Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="90.0" styleClass="labels" text="Credit Card" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="creditCardField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="138.0" promptText="xxxx xxxx xxxx xxxxx" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="87.0" styleClass="labels" text="CVV" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <TextField fx:id="cvvField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="137.0" promptText="XXX" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <TextField fx:id="dateOfExpireField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="137.0" prefHeight="25.0" prefWidth="137.0" promptText="MM/YY" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="91.0" styleClass="labels" text="Date of Expire" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="107.0" styleClass="labels" text="Contact number" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                  <TextField fx:id="contactNumberField" alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+                  <TextField fx:id="nightsToStay" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="137.0" GridPane.columnIndex="3" />
+                  <Label fx:id="nameStatus" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="surnameStatus" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="passportStatus" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="dateStatus" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label fx:id="timeStatus" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Label fx:id="nightsToStayStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="creditCardStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label fx:id="cvvStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label fx:id="dateOfExpireStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <Label fx:id="contactNumberStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#newReservationDone" prefHeight="27.0" prefWidth="158.0" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                  <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Take from" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+                  <TextField fx:id="takeFromField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Label fx:id="takeFromStatus" GridPane.columnIndex="1" GridPane.rowIndex="11" />
                </children>
                <opaqueInsets>
                   <Insets />
@@ -71,13 +82,13 @@
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="249.0">
                <children>
                   <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="249.0" styleClass="roomLabel" text="Room" />
-                  <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="215.0">
+                  <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="215.0">
                     <panes>
                       <TitledPane animated="false" text="King">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="52.0" layoutY="87.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="102.0" text="1111" />
+                                    <Button fx:id="room999" layoutX="52.0" layoutY="87.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="102.0" text="999" />
                                     <Button layoutX="6.0" layoutY="87.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="39.0" />
                                     <Button layoutX="161.0" layoutY="87.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="45.0" />
                                  </children>
@@ -88,10 +99,10 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="7.0" layoutY="72.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="44.0" text="901" />
-                                    <Button layoutX="59.0" layoutY="72.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="44.0" text="902" />
-                                    <Button layoutX="111.0" layoutY="72.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="44.0" text="903" />
-                                    <Button layoutX="163.0" layoutY="72.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="44.0" text="904" />
+                                    <Button fx:id="room801" layoutX="7.0" layoutY="72.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="78.0" prefWidth="44.0" text="801" />
+                                    <Button fx:id="room802" layoutX="59.0" layoutY="72.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="78.0" prefWidth="44.0" text="802" />
+                                    <Button fx:id="room803" layoutX="111.0" layoutY="72.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="78.0" prefWidth="44.0" text="803" />
+                                    <Button fx:id="room804" layoutX="163.0" layoutY="72.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="78.0" prefWidth="44.0" text="804" />
                                  </children>
                               </AnchorPane>
                         </content>
@@ -100,11 +111,11 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="3.0" layoutY="76.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="801" />
-                                    <Button layoutX="45.0" layoutY="76.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="802" />
-                                    <Button layoutX="87.0" layoutY="76.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="803" />
-                                    <Button layoutX="129.0" layoutY="76.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="804" />
-                                    <Button layoutX="171.0" layoutY="76.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="805" />
+                                    <Button fx:id="room701" layoutX="3.0" layoutY="76.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="701" />
+                                    <Button fx:id="room702" layoutX="45.0" layoutY="76.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="702" />
+                                    <Button fx:id="room703" layoutX="87.0" layoutY="76.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="703" />
+                                    <Button fx:id="room704" layoutX="129.0" layoutY="76.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="704" />
+                                    <Button fx:id="room705" layoutX="171.0" layoutY="76.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="705" />
                                  </children>
                               </AnchorPane>
                         </content>
@@ -113,11 +124,11 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="3.0" layoutY="80.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="701" />
-                                    <Button layoutX="45.0" layoutY="80.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="702" />
-                                    <Button layoutX="87.0" layoutY="80.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="703" />
-                                    <Button layoutX="129.0" layoutY="80.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="704" />
-                                    <Button layoutX="171.0" layoutY="80.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="40.0" text="705" />
+                                    <Button fx:id="room601" layoutX="3.0" layoutY="80.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="601" />
+                                    <Button fx:id="room602" layoutX="45.0" layoutY="80.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="602" />
+                                    <Button fx:id="room603" layoutX="87.0" layoutY="80.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="603" />
+                                    <Button fx:id="room604" layoutX="129.0" layoutY="80.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="604" />
+                                    <Button fx:id="room605" layoutX="171.0" layoutY="80.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="62.0" prefWidth="40.0" text="605" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -126,24 +137,42 @@
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <Button layoutX="6.0" layoutY="58.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="501" />
-                                    <Button layoutX="78.0" layoutY="58.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="502" />
-                                    <Button layoutX="148.0" layoutY="58.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="503" />
-                                    <Button layoutX="149.0" layoutY="124.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="506" />
-                                    <Button layoutX="79.0" layoutY="124.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="505" />
-                                    <Button layoutX="7.0" layoutY="124.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="63.0" text="504" />
+                                    <Button fx:id="room501" layoutX="6.0" layoutY="58.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="501" />
+                                    <Button fx:id="room502" layoutX="78.0" layoutY="58.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="502" />
+                                    <Button fx:id="room503" layoutX="148.0" layoutY="58.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="503" />
+                                    <Button fx:id="room506" layoutX="149.0" layoutY="124.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="506" />
+                                    <Button fx:id="room505" layoutX="79.0" layoutY="124.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="505" />
+                                    <Button fx:id="room504" layoutX="7.0" layoutY="124.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="30.0" prefWidth="63.0" text="504" />
                                  </children>
                               </AnchorPane>
                            </content>
                         </TitledPane>
                         <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="Double">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="room401" layoutX="3.0" layoutY="57.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="401" />
+                                    <Button fx:id="room402" layoutX="74.0" layoutY="57.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="402" />
+                                    <Button fx:id="room403" layoutX="144.0" layoutY="57.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="403" />
+                                    <Button fx:id="room404" layoutX="3.0" layoutY="129.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="404" />
+                                    <Button fx:id="room406" layoutX="144.0" layoutY="129.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="406" />
+                                    <Button fx:id="room405" layoutX="74.0" layoutY="129.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="33.0" prefWidth="66.0" text="405" />
+                                 </children></AnchorPane>
                            </content>
                         </TitledPane>
                         <TitledPane animated="false" layoutX="10.0" layoutY="135.0" prefHeight="235.0" prefWidth="215.0" text="Single">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="room301" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="301" />
+                                    <Button fx:id="room302" layoutX="60.0" layoutY="64.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="302" />
+                                    <Button fx:id="room303" layoutX="111.0" layoutY="64.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="303" />
+                                    <Button fx:id="room304" layoutX="160.0" layoutY="64.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="304" />
+                                    <Button fx:id="room305" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="305" />
+                                    <Button fx:id="room306" layoutX="60.0" layoutY="122.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="306" />
+                                    <Button fx:id="room307" layoutX="111.0" layoutY="122.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="307" />
+                                    <Button fx:id="room308" layoutX="160.0" layoutY="122.0" mnemonicParsing="false" onAction="#selectedRoom" prefHeight="25.0" prefWidth="43.0" text="308" />
+                                 </children></AnchorPane>
                            </content>
                         </TitledPane>
                     </panes>

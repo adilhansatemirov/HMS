@@ -15,7 +15,7 @@ public class GuestModel {
     private final StringProperty surname;
     private final StringProperty timeOfArrival;
     private final StringProperty timeOfDeparture;
-    private final StringProperty needsTransfer;
+    private final StringProperty passport;
     private final StringProperty takeFrom;
     private final StringProperty nightsToStay;
     private final StringProperty contactNumber;
@@ -48,16 +48,16 @@ public class GuestModel {
     *   14: currentBalance
 */
     public GuestModel(String ID, String name, String surname, String timeOfArrival,
-                      String nightsToStay, String needsTransfer, String takeFrom, String contactNumber,
+                      String nightsToStay, String passport, String takeFrom, String contactNumber,
                       String roomID, String creditCardNumber, String CVV, String monthOfExpire,
                       String yearOfExpire, String currentBalance, String timeOfDeparture){
         this.ID = new SimpleStringProperty(ID);
         this.name = new SimpleStringProperty(name);
         this.surname = new SimpleStringProperty(surname);
         this.timeOfArrival = new SimpleStringProperty(customizedDate(timeOfArrival));
-        this.needsTransfer = new SimpleStringProperty(needsTransfer);
-        this.takeFrom = new SimpleStringProperty(takeFrom);
         this.nightsToStay = new SimpleStringProperty(nightsToStay);
+        this.passport = new SimpleStringProperty(passport);
+        this.takeFrom = new SimpleStringProperty(takeFrom);
         this.contactNumber = new SimpleStringProperty(contactNumber);
         this.roomID = new SimpleStringProperty(roomID);
         this.creditCardNumber = new SimpleStringProperty(creditCardNumber);
@@ -173,15 +173,15 @@ public class GuestModel {
     }
 
     public String getNeedsTransfer() {
-        return needsTransfer.get();
+        return passport.get();
     }
 
     public StringProperty needsTransferProperty() {
-        return needsTransfer;
+        return passport;
     }
 
     public void setNeedsTransfer(String needsTransfer) {
-        this.needsTransfer.set(needsTransfer);
+        this.passport.set(needsTransfer);
     }
 
     public String getTakeFrom() {

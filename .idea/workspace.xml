@@ -58,14 +58,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NewReservationController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewReservationController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/NewReservation/NewReservationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="77">
+              <caret line="58" column="50" lean-forward="true" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5487#5488#0" expanded="true" />
+                <element signature="e#5543#5544#0" expanded="true" />
+                <element signature="e#5599#5600#0" expanded="true" />
+                <element signature="e#5673#5674#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuestModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GuestModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,17 +93,45 @@
             <state relative-caret-position="-54">
               <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
-                <marker date="1521787135904" expanded="true" signature="14791:14793" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9152:9212" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9401:20055" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9427:20048" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9705:19832" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9733:19685" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9797:10098" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9831:10098" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9938:10098" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="9982:10098" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19473:19567" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19473:19580" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19473:19618" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19473:19656" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19720:19801" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="19830:19832" ph="..." />
+                <marker date="1521845277923" expanded="true" signature="20125:20189" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+            <state relative-caret-position="36">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPageHome.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/FXML_CSS/MainPageHome.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="178" column="17" lean-forward="false" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -149,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/NewReservation.java" />
         <option value="$PROJECT_DIR$/src/sample/icons/SwitchScenesCotroller.java" />
         <option value="$PROJECT_DIR$/src/sample/icons/SwitchScenesController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML_CSS/styleMainPageGuests" />
@@ -179,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/sample/FXML_CSS/styleMainPage" />
         <option value="$PROJECT_DIR$/src/sample/GuestsScreen/HomeController.java" />
         <option value="$PROJECT_DIR$/src/sample/GuestsScreen/styleGuests" />
-        <option value="$PROJECT_DIR$/src/sample/FXML_CSS/MainPageHome.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/HomeScreen/NewReservation.fxml" />
         <option value="$PROJECT_DIR$/src/sample/GuestsScreen/GuestController.java" />
@@ -194,19 +234,21 @@
         <option value="$PROJECT_DIR$/src/sample/GuestClass.java" />
         <option value="$PROJECT_DIR$/src/sample/Guests/GuestController.java" />
         <option value="$PROJECT_DIR$/src/sample/NewReservationController.java" />
-        <option value="$PROJECT_DIR$/src/sample/NewReservation/NewReservationController.java" />
         <option value="$PROJECT_DIR$/src/sample/Home/HomeController.java" />
         <option value="$PROJECT_DIR$/src/sample/LogIn/LogInController.java" />
         <option value="$PROJECT_DIR$/src/sample/LogInModel.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML_CSS/MainPageHome.fxml" />
         <option value="$PROJECT_DIR$/src/sample/HomeController.java" />
         <option value="$PROJECT_DIR$/src/sample/NewReservation/NewReservation.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/GuestModel.java" />
+        <option value="$PROJECT_DIR$/src/sample/NewReservation/NewReservationController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-26" />
-    <option name="width" value="702" />
+    <option name="width" value="663" />
     <option name="height" value="780" />
   </component>
   <component name="ProjectReloadState">
@@ -498,7 +540,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26393443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26393443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -807,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GuestModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="52" column="88" lean-forward="false" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MenuGuests/GuestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -844,17 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML_CSS/MainPageHome.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3366">
-          <caret line="187" column="55" lean-forward="false" selection-start-line="187" selection-start-column="55" selection-end-line="187" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/LogInModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -863,20 +884,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/NewReservation/NewReservationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MenuHome/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="43" column="98" lean-forward="true" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML_CSS/MainPageHome.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="178" column="17" lean-forward="false" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -889,16 +911,53 @@
         <state relative-caret-position="-54">
           <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
-            <marker date="1521787135904" expanded="true" signature="14791:14793" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9152:9212" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9401:20055" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9427:20048" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9705:19832" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9733:19685" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9797:10098" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9831:10098" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9938:10098" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="9982:10098" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19473:19567" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19473:19580" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19473:19618" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19473:19656" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19720:19801" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="19830:19832" ph="..." />
+            <marker date="1521845277923" expanded="true" signature="20125:20189" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="36">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GuestModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/NewReservation/NewReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="58" column="50" lean-forward="true" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5487#5488#0" expanded="true" />
+            <element signature="e#5543#5544#0" expanded="true" />
+            <element signature="e#5599#5600#0" expanded="true" />
+            <element signature="e#5673#5674#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
