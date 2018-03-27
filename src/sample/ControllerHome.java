@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable{
+public class ControllerHome implements Initializable{
     public BorderPane borderPane;
 
     public void setSceneGuests() throws Exception{

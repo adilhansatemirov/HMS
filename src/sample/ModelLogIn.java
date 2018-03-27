@@ -8,11 +8,11 @@ import java.sql.SQLException;
 //IMPORT OF THE PACKAGE TO CONNECT TO DATABASE
 import sample.dbUtil.dbConnection;
 
-class LogInModel {
+class ModelLogIn {
     //CONNECTION TO DATABASE
     private Connection connection;
 
-    LogInModel() {
+    ModelLogIn() {
         try {
             this.connection = dbConnection.getConnection();
         } catch (SQLException e) {

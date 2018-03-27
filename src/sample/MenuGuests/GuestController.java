@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sample.GuestModel;
+import sample.ModelGuest;
 import sample.dbUtil.dbConnection;
 import java.io.IOException;
 import java.net.URL;
@@ -21,13 +21,13 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class GuestController implements Initializable{
-    public TableView<GuestModel> tableGuests;
-    public TableColumn<GuestModel, String> nameColumn;
-    public TableColumn<GuestModel, String> surnameColumn;
-    public TableColumn<GuestModel, String> roomColumn;
-    public TableColumn<GuestModel, String> leavesOnColumn;
-    public TableColumn<GuestModel, String> numberColumn;
-    public TableColumn<GuestModel, String> balanceColumn;
+    public TableView<ModelGuest> tableGuests;
+    public TableColumn<ModelGuest, String> nameColumn;
+    public TableColumn<ModelGuest, String> surnameColumn;
+    public TableColumn<ModelGuest, String> roomColumn;
+    public TableColumn<ModelGuest, String> leavesOnColumn;
+    public TableColumn<ModelGuest, String> numberColumn;
+    public TableColumn<ModelGuest, String> balanceColumn;
 
 
     @Override
@@ -50,7 +50,7 @@ public class GuestController implements Initializable{
         }
     }
     private dbConnection dataBaseConnection;
-    private ObservableList<GuestModel> dataOfGuest;
+    private ObservableList<ModelGuest> dataOfGuest;
     private String sqlRequest = "SELECT * FROM Client;";
 
     public void loadGuestData(){
@@ -60,7 +60,7 @@ public class GuestController implements Initializable{
 
             ResultSet resultSet = connection.createStatement().executeQuery(sqlRequest);
             while (resultSet.next()){
-                dataOfGuest.add(new GuestModel(
+                dataOfGuest.add(new ModelGuest(
                         resultSet.getString(1), //ID
                         resultSet.getString(2), //name
                         resultSet.getString(3), //surname

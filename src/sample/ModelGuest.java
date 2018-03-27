@@ -5,7 +5,7 @@ import javafx.beans.property.StringProperty;
 
 import java.util.HashMap;
 
-public class GuestModel {
+public class ModelGuest {
     //CLASS THAT CONTAINS ATTRIBUTES OF GUEST
     //CONNECTED TO DATABASE
 
@@ -47,7 +47,7 @@ public class GuestModel {
     *   13: yearOfExpire
     *   14: currentBalance
 */
-    public GuestModel(String ID, String name, String surname, String timeOfArrival,
+    public ModelGuest(String ID, String name, String surname, String timeOfArrival,
                       String nightsToStay, String passport, String takeFrom, String contactNumber,
                       String roomID, String creditCardNumber, String CVV, String monthOfExpire,
                       String yearOfExpire, String currentBalance, String timeOfDeparture){

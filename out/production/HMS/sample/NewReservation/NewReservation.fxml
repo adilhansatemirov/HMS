@@ -70,7 +70,7 @@
                   <Label fx:id="cvvStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
                   <Label fx:id="dateOfExpireStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
                   <Label fx:id="contactNumberStatus" style="-fx-text-fill: red;" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#newReservationDone" prefHeight="27.0" prefWidth="158.0" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                  <Button fx:id="submitButton" mnemonicParsing="false" onAction="#checkData" prefHeight="27.0" prefWidth="158.0" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
                   <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="Take from" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
                   <TextField fx:id="takeFromField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                   <Label fx:id="takeFromStatus" GridPane.columnIndex="1" GridPane.rowIndex="11" />
@@ -82,9 +82,9 @@
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="249.0">
                <children>
                   <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="249.0" styleClass="roomLabel" text="Room" />
-                  <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="215.0">
+                  <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="215.0">
                     <panes>
-                      <TitledPane animated="false" text="King">
+                      <TitledPane animated="false" text="9 King">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -95,7 +95,7 @@
                               </AnchorPane>
                         </content>
                       </TitledPane>
-                      <TitledPane animated="false" text="Duplex &amp; Double Double">
+                      <TitledPane animated="false" text="8 Duplex &amp; Double Double">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -107,7 +107,7 @@
                               </AnchorPane>
                         </content>
                       </TitledPane>
-                      <TitledPane animated="false" text="Efficiency">
+                      <TitledPane animated="false" text="7 Efficiency">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -120,7 +120,7 @@
                               </AnchorPane>
                         </content>
                       </TitledPane>
-                        <TitledPane animated="false" layoutX="10.0" layoutY="60.0" text="Adjoining">
+                        <TitledPane animated="false" layoutX="10.0" layoutY="60.0" text="6 Adjoining">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -133,7 +133,7 @@
                               </AnchorPane>
                            </content>
                         </TitledPane>
-                        <TitledPane animated="false" layoutX="10.0" layoutY="85.0" text="Twin">
+                        <TitledPane animated="false" layoutX="10.0" layoutY="85.0" text="5 Twin">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -147,7 +147,7 @@
                               </AnchorPane>
                            </content>
                         </TitledPane>
-                        <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="Double">
+                        <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="4 Double">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -160,7 +160,7 @@
                                  </children></AnchorPane>
                            </content>
                         </TitledPane>
-                        <TitledPane animated="false" layoutX="10.0" layoutY="135.0" prefHeight="235.0" prefWidth="215.0" text="Single">
+                        <TitledPane animated="false" layoutX="10.0" layoutY="135.0" prefHeight="235.0" prefWidth="215.0" text="3 Single">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -180,6 +180,16 @@
                         <Insets top="3.0" />
                      </VBox.margin>
                   </Accordion>
+                  <Label fx:id="roomStatus" style="-fx-text-fill: red;">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="successfullyCompletedReservation" style="-fx-font-size: 15; -fx-text-fill: green;">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
                </children></VBox>
          </items>
       </SplitPane>

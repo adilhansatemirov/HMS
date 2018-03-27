@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import sample.GuestModel;
+import sample.ModelGuest;
 import sample.dbUtil.dbConnection;
 import java.io.IOException;
 import java.net.URL;
@@ -21,15 +21,15 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class HomeController implements Initializable{
-    public TableView<GuestModel> tableGuests;
-    public TableColumn<GuestModel, String> nameSurnameColumn;
-    public TableColumn<GuestModel, String> roomColumn;
-    public TableColumn<GuestModel, String> leavesInColumn;
+    public TableView<ModelGuest> tableGuests;
+    public TableColumn<ModelGuest, String> nameColumn;
+    public TableColumn<ModelGuest, String> surnameColumn;
+    public TableColumn<ModelGuest, String> contactNumberColumn;
 
-    public TableView<GuestModel>  transactionTable;
-    public TableColumn<GuestModel, String> transactionColumn;
-    public TableColumn<GuestModel, String> guestColumn;
-    public TableColumn<GuestModel, String> spentColumn;
+    public TableView<ModelGuest>  transactionTable;
+    public TableColumn<ModelGuest, String> transactionColumn;
+    public TableColumn<ModelGuest, String> guestColumn;
+    public TableColumn<ModelGuest, String> spentColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,17 +52,17 @@ public class HomeController implements Initializable{
         }
     }
     private dbConnection dataBaseConnection;
-    private ObservableList<GuestModel> dataOfGuest;
+    private ObservableList<ModelGuest> dataOfGuest;
     private String sqlRequest = "SELECT * FROM Client;";
 
     public void loadGuestData(){
         try {
             Connection connection = dbConnection.getConnection();
-            this.dataOfGuest = FXCollections.observableArrayList();
+            dataOfGuest = FXCollections.observableArrayList();
 
             ResultSet resultSet = connection.createStatement().executeQuery(sqlRequest);
             while (resultSet.next()){
-                dataOfGuest.add(new GuestModel(
+                dataOfGuest.add(new ModelGuest(
                         resultSet.getString(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
@@ -82,9 +82,9 @@ public class HomeController implements Initializable{
         }catch (SQLException e){
             System.err.println("Error" + e);
         }
-        this.nameSurnameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        this.leavesInColumn.setCellValueFactory(new PropertyValueFactory<>("timeOfArrival"));
-        this.roomColumn.setCellValueFactory(new PropertyValueFactory<>("roomID"));
+        this.nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        this.surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
+        this.contactNumberColumn.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
 
         this.tableGuests.setItems(null);
         this.tableGuests.setItems(dataOfGuest);
@@ -96,7 +96,7 @@ public class HomeController implements Initializable{
 
             ResultSet resultSet = connection.createStatement().executeQuery(sqlRequest);
             while (resultSet.next()){
-                dataOfGuest.add(new GuestModel(
+                dataOfGuest.add(new ModelGuest(
                         resultSet.getString(1),
                         resultSet.getString(2),
                         resultSet.getString(3),

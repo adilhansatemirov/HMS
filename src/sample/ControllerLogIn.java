@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LogInController implements Initializable {
-    LogInModel logInModel = new LogInModel();
+public class ControllerLogIn implements Initializable {
+    ModelLogIn modelLogIn = new ModelLogIn();
     @FXML
     public TextField usernamePlaceHolder;
     public PasswordField passwordPlaceHolder;
@@ -24,7 +24,7 @@ public class LogInController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if(this.logInModel.databaseIsConnected()){
+        if(this.modelLogIn.databaseIsConnected()){
             this.dbStatus.setText("Database connected");
         }else {
             this.dbStatus.setText("Not connected");
@@ -33,7 +33,7 @@ public class LogInController implements Initializable {
 
     //GETS THE DATA FROM TEXTFIELDS AND SENDS IT TO MODEL WHERE IT IS BEING CHECKED
     public void login() throws Exception{
-        if(logInModel.isLogin(usernamePlaceHolder.getText(), passwordPlaceHolder.getText())){
+        if(modelLogIn.isLogin(usernamePlaceHolder.getText(), passwordPlaceHolder.getText())){
             Stage stage = (Stage)logInButton.getScene().getWindow();
             stage.close();
             accessPermitted();
