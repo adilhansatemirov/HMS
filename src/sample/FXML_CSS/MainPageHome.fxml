@@ -13,17 +13,12 @@
          <menus>
              <Menu styleClass="menus" text="File">
                 <items>
-                    <MenuItem text="Close" />
-                </items>
-             </Menu>
-             <Menu mnemonicParsing="false" text="Edit">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem onAction="#close" text="Close" />
                 </items>
              </Menu>
              <Menu mnemonicParsing="false" text="Help">
                 <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" onAction="#showInfo" text="About" />
                 </items>
              </Menu>
          </menus>
@@ -32,7 +27,7 @@
    <left>
       <VBox fillWidth="false" prefHeight="386.0" prefWidth="152.0" styleClass="vBoxLeft" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#setSceneHome" prefHeight="45.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Home">
+            <Button layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onAction="#setSceneHome" prefHeight="50.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Home">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -53,7 +48,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#setSceneGuests" prefHeight="37.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Guests">
+            <Button mnemonicParsing="false" onAction="#setSceneGuests" prefHeight="50.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Guests">
                <VBox.margin>
                   <Insets top="4.0" />
                </VBox.margin>
@@ -68,7 +63,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#setSceneRooms" prefHeight="18.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Rooms">
+            <Button layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#setSceneRooms" prefHeight="50.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Rooms">
                <VBox.margin>
                   <Insets top="4.0" />
                </VBox.margin>
@@ -80,19 +75,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="10.0" layoutY="82.0" mnemonicParsing="false" onAction="#setSceneStaff" prefHeight="22.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Staff  ">
-               <VBox.margin>
-                  <Insets top="4.0" />
-               </VBox.margin>
-               <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="35.0" opacity="0.4">
-                     <image>
-                        <Image url="@../Icons/staff%20(1).png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#setSceneTransactions" prefHeight="24.0" prefWidth="145.0" styleClass="buttonsLeft" text="Transactions">
+            <Button layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#setSceneTransactions" prefHeight="50.0" prefWidth="145.0" styleClass="buttonsLeft" text="Transactions">
                <VBox.margin>
                   <Insets top="4.0" />
                </VBox.margin>
@@ -100,18 +83,6 @@
                   <ImageView fitHeight="29.0" fitWidth="31.0" opacity="0.4">
                      <image>
                         <Image url="@../Icons/payment-method.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="10.0" layoutY="146.0" mnemonicParsing="false" onAction="#setSceneTransport" prefHeight="26.0" prefWidth="145.0" styleClass="buttonsLeft" text=" Transport   ">
-               <VBox.margin>
-                  <Insets top="4.0" />
-               </VBox.margin>
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="30.0" opacity="0.4">
-                     <image>
-                        <Image url="@../Icons/car-front.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -131,7 +102,7 @@
    <bottom>
       <HBox prefHeight="30.0" prefWidth="607.0" spacing="3.0" styleClass="bottomPart" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="211.0" styleClass="bottomButtons" text="Map" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#notAvailable" prefHeight="25.0" prefWidth="211.0" styleClass="bottomButtons" text="Map" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <padding>
                   <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                </padding>
@@ -146,7 +117,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" styleClass="bottomButtons" text="Settings" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#notAvailable" prefHeight="25.0" prefWidth="206.0" styleClass="bottomButtons" text="Settings" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <padding>
                   <Insets top="2.0" />
                </padding>
@@ -158,7 +129,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="bottomButtons" text="Manual" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#notAvailable" prefHeight="25.0" prefWidth="200.0" styleClass="bottomButtons" text="Manual" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <padding>
                   <Insets top="2.0" />
                </padding>

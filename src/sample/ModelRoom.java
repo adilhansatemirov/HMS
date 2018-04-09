@@ -10,14 +10,14 @@ public class ModelRoom {
     private final StringProperty name;
     private final StringProperty surname;
     private final StringProperty type;
-    private final IntegerProperty charge;
+    private final IntegerProperty roomCharge;
 
-    public ModelRoom(int roomNumber,String name, String surname, String type, int charge){
+    public ModelRoom(int roomNumber,String name, String surname, String type, int roomCharge){
         this.roomNumber = new SimpleIntegerProperty(roomNumber);
         this.name = new SimpleStringProperty(name);
         this.surname = new SimpleStringProperty(surname);
         this.type = new SimpleStringProperty(type);
-        this.charge = new SimpleIntegerProperty(charge);
+        this.roomCharge = new SimpleIntegerProperty(roomCharge);
     }
 
     public String getName() {
@@ -68,15 +68,15 @@ public class ModelRoom {
         this.type.set(type);
     }
 
-    public int getCharge() {
-        return charge.get();
+    public int getRoomCharge() {
+        return roomCharge.get();
     }
 
-    public IntegerProperty chargeProperty() {
-        return charge;
+    public IntegerProperty roomChargeProperty() {
+        return roomCharge;
     }
 
-    public void setCharge(int charge) {
-        this.charge.set(charge);
+    public void setRoomCharge(int roomCharge) {
+        this.roomCharge.set(roomCharge);
     }
 }

@@ -9,9 +9,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.ModelGuest;
+import sample.ModelTransaction;
 import sample.dbUtil.dbConnection;
 import java.io.IOException;
 import java.net.URL;
@@ -26,10 +28,10 @@ public class HomeController implements Initializable{
     public TableColumn<ModelGuest, String> surnameColumn;
     public TableColumn<ModelGuest, String> contactNumberColumn;
 
-    public TableView<ModelGuest>  transactionTable;
-    public TableColumn<ModelGuest, String> transactionColumn;
-    public TableColumn<ModelGuest, String> guestColumn;
-    public TableColumn<ModelGuest, String> spentColumn;
+    public TableView<ModelTransaction>  transactionTable;
+    public TableColumn<ModelTransaction, String> transactionColumn;
+    public TableColumn<ModelTransaction, String> guestColumn;
+    public TableColumn<ModelTransaction, String> timeColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,20 +42,25 @@ public class HomeController implements Initializable{
     public void newReservation() {
         try {
             Stage stage = new Stage();
+            stage.getIcons().add(new Image("/HMS.png"));
             stage.setWidth(701);
             Parent root = FXMLLoader.load(getClass().getResource("../NewReservation/NewReservation.fxml"));
+            Scene scene = new Scene(root);
             stage.setTitle("New reservation");
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
             stage.show();
+            //ControllerGuest.stage.setScene(scene);
         } catch (IOException e) {
             System.out.println("File not found");
         }
     }
     private dbConnection dataBaseConnection;
     private ObservableList<ModelGuest> dataOfGuest;
+    private ObservableList<ModelTransaction> dataOfTransaction;
     private String sqlRequest = "SELECT * FROM Client;";
+    private String sqlRequestTransaction = "SELECT * FROM ListTransaction;";
 
     public void loadGuestData(){
         try {
@@ -92,35 +99,25 @@ public class HomeController implements Initializable{
     public void loadTransactionsData(){
         try {
             Connection connection = dbConnection.getConnection();
-            this.dataOfGuest = FXCollections.observableArrayList();
+            this.dataOfTransaction = FXCollections.observableArrayList();
 
-            ResultSet resultSet = connection.createStatement().executeQuery(sqlRequest);
+            ResultSet resultSet = connection.createStatement().executeQuery(sqlRequestTransaction);
             while (resultSet.next()){
-                dataOfGuest.add(new ModelGuest(
+                dataOfTransaction.add(new ModelTransaction(
                         resultSet.getString(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
-                        resultSet.getString(4),
-                        resultSet.getString(5),
-                        resultSet.getString(6),
-                        resultSet.getString(7),
-                        resultSet.getString(8),
-                        resultSet.getString(9),
-                        resultSet.getString(10),
-                        resultSet.getString(11),
-                        resultSet.getString(12),
-                        resultSet.getString(13),
-                        resultSet.getString(14),
-                        resultSet.getString(15)));
+                        resultSet.getInt(4),
+                        resultSet.getString(5)));
             }
         }catch (SQLException e){
             System.err.println("Error" + e);
         }
-        this.transactionColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        this.transactionColumn.setCellValueFactory(new PropertyValueFactory<>("spentOn"));
         this.guestColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
-        this.spentColumn.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
+        this.timeColumn.setCellValueFactory(new PropertyValueFactory<>("time"));
 
         this.transactionTable.setItems(null);
-        this.transactionTable.setItems(dataOfGuest);
+        this.transactionTable.setItems(dataOfTransaction);
     }
 }

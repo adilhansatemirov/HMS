@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="314.0" prefWidth="286.0" styleClass="gridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXML_CSS.ControllerAbout">
+   <children>
+      <Label layoutX="56.0" layoutY="104.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="Hotel Manageent System v1.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label layoutX="54.0" layoutY="239.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="adilhansatemirovv@gmail.com" />
+      <ImageView fitHeight="96.0" fitWidth="200.0" layoutX="49.0">
+         <image>
+            <Image url="@../Icons/HMS.png" />
+         </image>
+         <VBox.margin>
+            <Insets left="62.0" top="9.0" />
+         </VBox.margin>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="130.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="Developed by: Adilkhan Satemirov">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label layoutX="69.0" layoutY="199.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="Questions and complains:">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label layoutX="95.0" layoutY="219.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="8 (775) 216 01 56" />
+      <Button fx:id="okButton" layoutX="114.0" layoutY="272.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="70.0" text="Ok" />
+      <Label layoutX="115.0" layoutY="147.0" style="-fx-text-fill: white; -fx-font-size: 14;" text="08.04.2018" />
+   </children>
+    <stylesheets>
+        <URL value="@styleLogIn" />
+    </stylesheets>
+</AnchorPane>

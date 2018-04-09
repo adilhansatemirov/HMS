@@ -112,6 +112,54 @@ public class ModelGuest {
         numberMonthMap.put(12,"December");
     }
 
+    public String getDateOfExpire(){
+        return getMonthOfExpire()+"/"+getYearOfExpire();
+    }
+
+    public String getPassport() {
+        return passport.get();
+    }
+
+    public StringProperty passportProperty() {
+        return passport;
+    }
+
+    public void setPassport(String passport) {
+        this.passport.set(passport);
+    }
+
+    public HashMap<Integer, String> getNumberMonthMap() {
+        return numberMonthMap;
+    }
+
+    public void setNumberMonthMap(HashMap<Integer, String> numberMonthMap) {
+        this.numberMonthMap = numberMonthMap;
+    }
+
+    public static int getDayOfDeparture() {
+        return dayOfDeparture;
+    }
+
+    public static void setDayOfDeparture(int dayOfDeparture) {
+        ModelGuest.dayOfDeparture = dayOfDeparture;
+    }
+
+    public static int getMonthOfDeparture() {
+        return monthOfDeparture;
+    }
+
+    public static void setMonthOfDeparture(int monthOfDeparture) {
+        ModelGuest.monthOfDeparture = monthOfDeparture;
+    }
+
+    public static int getYearOfDeparture() {
+        return yearOfDeparture;
+    }
+
+    public static void setYearOfDeparture(int yearOfDeparture) {
+        ModelGuest.yearOfDeparture = yearOfDeparture;
+    }
+
     public String getTimeOfDeparture() {
         return timeOfDeparture.get();
     }

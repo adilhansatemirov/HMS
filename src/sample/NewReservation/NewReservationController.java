@@ -3,6 +3,7 @@ package sample.NewReservation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import sample.dbUtil.dbConnection;
@@ -12,6 +13,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
@@ -28,7 +32,6 @@ public class NewReservationController implements Initializable {
     public TextField cvvField;
     public TextField dateOfExpireField;
     public TextField contactNumberField;
-    public TextField takeFromField;
     public Button submitButton;
 
     //STATUSES TO CONTROL THE CORRECTNESS OF DATA INPUT
@@ -42,7 +45,6 @@ public class NewReservationController implements Initializable {
     public Label cvvStatus;
     public Label dateOfExpireStatus;
     public Label contactNumberStatus;
-    public Label takeFromStatus;
     public Label roomStatus;
 
     //LABEL WHEN EVERYTHING IS CORRECT
@@ -103,15 +105,18 @@ public class NewReservationController implements Initializable {
     //CHECKING
     private void checkInput() {
 //******IF FIELD IS EMPTY*****************************************************
+
+        //NAME FIELD
         if (nameField.getText().isEmpty()) {
             nameStatus.setText("Enter the name");
             conditionToSubmit = false;
-        } else if (!Pattern.matches("[a-zA-Z]+", nameField.getText())) {
+        }else if (!Pattern.matches("[a-zA-Z]+", nameField.getText())) {
             nameStatus.setText("");
             nameStatus.setText("Letters only");
             conditionToSubmit = false;
         }
 
+        //SURNAME FIELD
         if (surnameField.getText().isEmpty()) {
             surnameStatus.setText("Enter the surname");
             conditionToSubmit = false;
@@ -121,6 +126,7 @@ public class NewReservationController implements Initializable {
             conditionToSubmit = false;
         }
 
+        //PASSPORT FIELD
         if (passportField.getText().isEmpty()) {
             passportStatus.setText("Enter the passport number");
             conditionToSubmit = false;
@@ -130,6 +136,7 @@ public class NewReservationController implements Initializable {
             conditionToSubmit = false;
         }
 
+        //DATE OF ARRIVAL FIELD
         String dateOfArrival = dateOfArrivalPicker.getEditor().getText();
         if (dateOfArrivalPicker.getEditor().getText().isEmpty()) {
             dateStatus.setText("Enter the date of arrival");
@@ -139,36 +146,41 @@ public class NewReservationController implements Initializable {
                 && (Integer.parseInt(dateOfArrival.substring(3, 5)) >= 1 && Integer.parseInt(dateOfArrival.substring(3, 5)) <= 12)
                 && dateOfArrival.charAt(5) == '.'
                 && (Integer.parseInt(dateOfArrival.substring(6)) >= 2018 && Integer.parseInt(dateOfArrival.substring(6)) <= 2022)
-                && dateOfArrival.substring(6).length() == 4)) {
-            //22.05.2018
-            //DATE INPUT CHECKING
+                && dateOfArrival.substring(6).length() == 4)){
             dateStatus.setText("");
             dateStatus.setText("format: 22.05.2018");
             conditionToSubmit = false;
         }
 
         //20:00
-//        int hours = Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2));
-//        int minutes = Integer.parseInt(timeOfArrivalFiled.getText().substring(3));
-        //TIME INPUT CHECKING
+        //TIME OF ARRIVAL FIELD
         if (timeOfArrivalFiled.getText().isEmpty()) {
             timeStatus.setText("Enter the time of arrival");
             conditionToSubmit = false;
-        } else if (!(Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) >= 0 &&
-                Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) <= 23 && Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) >= 0 && Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) <= 59 && timeOfArrivalFiled.getText().charAt(2) == ':')) {
+        } else if (!(Pattern.matches("[0-9]+",timeOfArrivalFiled.getText().substring(0, 2)) &&
+                (Pattern.matches("[0-9]+",timeOfArrivalFiled.getText().substring(3)) &&
+                (Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) >= 0 &&
+                Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) <= 23 &&
+                Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) >= 0 &&
+                Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) <= 59 &&
+                timeOfArrivalFiled.getText().length() == 5 &&
+                timeOfArrivalFiled.getText().charAt(2) == ':')))) {
             timeStatus.setText("");
             timeStatus.setText("format: 00:00");
             conditionToSubmit = false;
         }
 
+        //NIGHTS TO STAY FIELD
         if (nightsToStay.getText().isEmpty()) {
             nightsToStayStatus.setText("Enter how long guest will stay in hotel");
             conditionToSubmit = false;
         } else if (!Pattern.matches("[0-9]+", nightsToStay.getText())) {
             nightsToStayStatus.setText("");
             nightsToStayStatus.setText("Numbers only");
+            conditionToSubmit = false;
         }
 
+        //CREDIT CARD FIELD
         if (creditCardField.getText().isEmpty()) {
             creditCardStatus.setText("Enter the number of credit card");
             conditionToSubmit = false;
@@ -179,13 +191,15 @@ public class NewReservationController implements Initializable {
             conditionToSubmit = false;
         }
 
+        //CVV FIELD
         if (cvvField.getText().isEmpty()) {
-            cvvStatus.setText("Enter the CVV");
+            cvvStatus.setText("");
+            cvvStatus.setText("Enter CVV");
             conditionToSubmit = false;
         } else if ((!Pattern.matches("[0-9]+", cvvField.getText())) ||
                 cvvField.getText().length() != 3) {
-            cvvStatus.setText("3 numbers");
             cvvStatus.setText("");
+            cvvStatus.setText("3 numbers");
             conditionToSubmit = false;
         }
 
@@ -203,11 +217,11 @@ public class NewReservationController implements Initializable {
             roomStatus.setText("Select the room");
         }
 
-        if(dateOfExpireField.getText().isEmpty()){
+        if (dateOfExpireField.getText().isEmpty()) {
             conditionToSubmit = false;
             dateOfExpireStatus.setText("");
             dateOfExpireStatus.setText("Input date");
-        }else if ((!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(0, 2))) ||
+        } else if ((!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(0, 2))) ||
                 (!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(3))) ||
                 !(Integer.parseInt(dateOfExpireField.getText().substring(0, 2)) >= 1 && Integer.parseInt(dateOfExpireField.getText().substring(0, 2)) <= 12) ||
                 (Integer.parseInt(dateOfExpireField.getText().substring(3)) <= 18) || (dateOfExpireField.getText().length() != 5) ||
@@ -218,6 +232,7 @@ public class NewReservationController implements Initializable {
             conditionToSubmit = false;
         }
     }
+
 
     public void newReservationDone() {
         //INSERTING NEW GUEST INTO THE TABLE
@@ -261,7 +276,7 @@ public class NewReservationController implements Initializable {
             statementInsert.setString(4, fixDate(dateOfArrivalPicker.getEditor().getText(), timeOfArrivalFiled.getText()));
             statementInsert.setString(5, nightsToStay.getText());
             statementInsert.setString(6, passportField.getText());
-            statementInsert.setString(7, takeFromField.getText() + "");
+            statementInsert.setString(7, "");
             statementInsert.setString(8, contactNumberField.getText());
             statementInsert.setString(9, roomSelected);
             statementInsert.setString(10, creditCardField.getText());
@@ -293,7 +308,6 @@ public class NewReservationController implements Initializable {
         cvvField.setText("");
         dateOfExpireField.setText("");
         contactNumberField.setText("");
-        takeFromField.setText("");
 
         nameStatus.setText("");
         surnameStatus.setText("");
@@ -305,7 +319,6 @@ public class NewReservationController implements Initializable {
         cvvStatus.setText("");
         dateOfExpireStatus.setText("");
         contactNumberStatus.setText("");
-        takeFromStatus.setText("");
 
 
         successfullyCompletedReservation.setText("Successfully saved");
@@ -337,53 +350,16 @@ public class NewReservationController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //REQUEST TO GET THE LIST OF ROOMS AND THEIR OWNERS
-        String sqlCheckWhichIsFree = "SELECT Name, Surname, RoomID FROM Client";
-
-        //DATA WHICH ROOMS ARE FREE
-        ObservableList<Integer> busyRooms;
         try {
             Connection connection = dbConnection.getConnection();
-
-            //INITIALIZING THE LIST
-            busyRooms = FXCollections.observableArrayList();
-
-            //EXECUTING AND GETTING THE RESULT SET THAT CONTAINS OWNERS AND ROOMS
-            ResultSet resultSet = connection.createStatement().executeQuery(sqlCheckWhichIsFree);
-
-            //GO THROUGH ALL THE RESULTS
-            while (resultSet.next()) {
-                //ADDING ROOMS WHICH ARE BUSY
-                busyRooms.add(resultSet.getInt(3));
-            }
 
             //LISTING ALL THE ROOMS IN HOTEL
             addAllRoomsToList();
 
-            //REQUEST TO UPDATE THE STATUS OF THE ROOM TO 'no'
-            String sqlUpdateRoom = "UPDATE Room SET Free = ? WHERE Number = ?";
-            PreparedStatement statementUpdate = connection.prepareStatement(sqlUpdateRoom);
-
-            //GO THROUGH ALL ROOMS THAT WE FOUND TO BE BUSY AND SER 'FREE' VALUE TO 'NO'
-            for (int busyRoom = 0; busyRoom < busyRooms.size(); busyRoom++) {
-                statementUpdate.setString(1, "no");
-                statementUpdate.setInt(2, busyRooms.get(busyRoom));
-                statementUpdate.executeUpdate();
-            }
-
-            //IF 'busyRooms' DOESN'T CONTAIN 'room', MEANS IT IS FREE, SO WE SET 'FREE' VALUE TO 'yes'
-            for (int room = 0; room < allRooms.size(); room++) {
-                if (!busyRooms.contains(allRooms.get(room))) {
-                    statementUpdate.setString(1, "yes");
-                    statementUpdate.setInt(2, allRooms.get(room));
-                    statementUpdate.executeUpdate();
-                }
-            }
-
             //ADDING BUTTONS TO ARRAYLIST 'allRoomsButtons'
             addRoomsButtons();
 
-            //GETTING NUMBER OF ROOM AND STATUS 'FRR' OR NOT
+            //GETTING NUMBER OF ROOM AND STATUS 'FREE' OR NOT
             String sqlGetFree = "SELECT Number, Free FROM Room";
             ResultSet resultSetOfRooms = connection.createStatement().executeQuery(sqlGetFree);
 
@@ -399,17 +375,16 @@ public class NewReservationController implements Initializable {
             for (int room = 0; room < roomFree.size(); room++) {
                 //IF IT IS FREE WE GET THIS ROOM FROM ARRAYLIST AND CHANGE IT'S COLOR TO GREEN
                 if (roomFree.get(room).equals("yes")) {
-                    allRoomsButtons.get(room)
-                            .setStyle("-fx-background-color: #0f9d58;");
+                    allRoomsButtons.get(room).setStyle("-fx-background-color: #0f9d58;");
                 } else {
                     //IF NOT CHANGE COLOR TO RED
-                    allRoomsButtons.get(room)
-                            .setStyle("-fx-background-color: #ea4335;");
+                    allRoomsButtons.get(room).setStyle("-fx-background-color: #ea4335;");
                 }
             }
 
             //CLOSING THE CONNECTION
             connection.close();
+            resultSetOfRooms.close();
         } catch (SQLException e) {
             e.getCause();
         }
@@ -431,18 +406,16 @@ public class NewReservationController implements Initializable {
                 roomStatus.setText("Room is busy");
                 roomSelected = null;
             }
-        } else{
+        } else {
             //IF SOME ROOM HAS BEEN SELECTED
             //WE GO THROUGH ALL THE ROOMS
             for (int index = 0; index < roomFree.size(); index++) {
                 //IF FREE -> TO GREEN
                 if (roomFree.get(index).equals("yes")) {
-                    allRoomsButtons.get(index)
-                            .setStyle("-fx-background-color: #0f9d58;");
+                    allRoomsButtons.get(index).setStyle("-fx-background-color: #0f9d58;");
                 } else {
                     //ELSE -> TO RED
-                    allRoomsButtons.get(index)
-                            .setStyle("-fx-background-color: #ea4335;");
+                    allRoomsButtons.get(index).setStyle("-fx-background-color: #ea4335;");
                 }
             }
             //SELECTED -> TO BLUE

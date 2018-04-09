@@ -18,7 +18,7 @@
             <TableColumn fx:id="nameColumn" prefWidth="86.0" styleClass="columns" text="Guest's Name" />
             <TableColumn fx:id="surnameColumn" minWidth="0.0" prefWidth="97.0" styleClass="columns" text="Guest's Surname" />
             <TableColumn fx:id="typeColumn" prefWidth="93.0" styleClass="columns" text="Type" />
-            <TableColumn fx:id="roomChargeColumn" minWidth="0.0" prefWidth="111.0" styleClass="columns" text="Room Charge" />
+            <TableColumn fx:id="roomChargeColumn" minWidth="0.0" prefWidth="111.0" styleClass="columns" text="Room Charge/$" />
          </columns>
          <opaqueInsets>
             <Insets />

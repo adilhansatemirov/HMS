@@ -21,7 +21,7 @@
                      <columns>
                         <TableColumn fx:id="transactionColumn" prefWidth="74.0" styleClass="columns" text="Transaction" />
                         <TableColumn fx:id="guestColumn" prefWidth="92.0" styleClass="columns" text="Guest" />
-                        <TableColumn fx:id="spentColumn" prefWidth="97.0" styleClass="columns" text="Spent" />
+                        <TableColumn fx:id="timeColumn" prefWidth="97.0" styleClass="columns" text="Time" />
                      </columns>
                   </TableView>
                </children>

@@ -7,8 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.ModelGuest;
@@ -20,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class GuestController implements Initializable{
+public class ControllerGuest implements Initializable{
     public TableView<ModelGuest> tableGuests;
     public TableColumn<ModelGuest, String> nameColumn;
     public TableColumn<ModelGuest, String> surnameColumn;
@@ -29,20 +31,48 @@ public class GuestController implements Initializable{
     public TableColumn<ModelGuest, String> numberColumn;
     public TableColumn<ModelGuest, String> balanceColumn;
 
+    public static Stage stage;
 
+
+    public static ModelGuest rowData;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         this.dataBaseConnection = new dbConnection();
         loadGuestData();
+
+        tableGuests.setRowFactory(tv ->{
+            TableRow<ModelGuest> rowGuest = new TableRow<>();
+            rowGuest.setOnMouseClicked(event -> {
+                if(event.getClickCount() == 2 && !rowGuest.isEmpty()) {
+                    rowData = rowGuest.getItem();
+                    try {
+                        stage = new Stage();
+                        stage.getIcons().add(new Image("/HMS.png"));
+                        Parent root = FXMLLoader.load(getClass().getResource("ViewGuestInfo.fxml"));
+                        stage.setTitle("Guest");
+                        stage.setScene(new Scene(root));
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.setResizable(false);
+                        stage.show();
+                    }catch (IOException e) {
+                        System.out.println("File not found");
+                    }
+                }
+            });
+            return rowGuest;
+        });
     }
+
     public void newReservation() {
         try {
             Stage stage = new Stage();
+            stage.getIcons().add(new Image("/HMS.png"));
             stage.setWidth(701);
             Parent root = FXMLLoader.load(getClass().getResource("../NewReservation/NewReservation.fxml"));
             stage.setTitle("New reservation");
             stage.setScene(new Scene(root));
-            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
             stage.show();
         } catch (IOException e) {

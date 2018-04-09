@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.image.*?>
 <?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="399.0" prefWidth="582.0" styleClass="vBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuGuests.GuestController">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="399.0" prefWidth="582.0" styleClass="vBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuGuests.ControllerGuest">
    <children>
       <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="279.0" styleClass="listLabel" text="Guests" />
       <TableView fx:id="tableGuests" fixedCellSize="0.0" maxHeight="1.7976931348623157E308" prefHeight="350.0" prefWidth="624.0" VBox.vgrow="ALWAYS">
@@ -19,7 +20,7 @@
             <TableColumn fx:id="roomColumn" minWidth="0.0" prefWidth="97.0" styleClass="columns" text="Room" />
             <TableColumn fx:id="leavesOnColumn" prefWidth="93.0" styleClass="columns" text="Leaves on" />
             <TableColumn fx:id="numberColumn" minWidth="0.0" prefWidth="111.0" styleClass="columns" text="Cont. Number" />
-            <TableColumn fx:id="balanceColumn" minWidth="0.0" prefWidth="111.0" styleClass="columns" text="Balance" />
+            <TableColumn fx:id="balanceColumn" minWidth="0.0" prefWidth="111.0" styleClass="columns" text="Balance/$" />
          </columns>
          <opaqueInsets>
             <Insets />
@@ -45,6 +46,6 @@
       <Insets />
    </opaqueInsets>
    <stylesheets>
-      <URL value="@styleGuests"/>
+      <URL value="@styleGuests" />
    </stylesheets>
 </VBox>

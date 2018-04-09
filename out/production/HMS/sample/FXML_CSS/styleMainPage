@@ -11,7 +11,7 @@
 .context-menu {
     -fx-background-color: derive(#1d1d1d,50%);
 }
-.menu-bar .label {
+.menu-bar .label{
     -fx-font-size: 12pt;
     -fx-text-fill: white;
     -fx-opacity: 0.9;
@@ -41,7 +41,7 @@
 
 /*   SPLIT PANE PROPERTIES   */
 .split-pane {
-    -fx-padding: 2 0 0 0;
+    -fx-padding: 2 4 0 0;
     -fx-background-color: #050c0c;
 }
 .split-pane:horizontal > .split-pane-divider {
@@ -128,6 +128,18 @@
     -fx-background-color: #f3af5a;
     -fx-border-color: #f3af5a;
     -fx-text-fill: black;
+}
+.clearHistory{
+    -fx-background-color: #132227;
+    -fx-border-color: #132227;
+    -fx-font-size: 13pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.clearHistory: hover{
+    -fx-background-color: #db4437;
+    -fx-border-color: #db4437;
+    -fx-text-fill: white;
 }
 
 /*   BOTTOM   */

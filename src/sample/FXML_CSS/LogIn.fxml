@@ -26,7 +26,7 @@
       <Label prefHeight="40.0" prefWidth="162.0" styleClass="labels" text="Password" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
       <TextField fx:id="usernamePlaceHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <PasswordField fx:id="passwordPlaceHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="logInButton" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="137.0" styleClass="button" text="Sing in" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <Button fx:id="logInButton" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="137.0" styleClass="button" text="Sign in" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
       <ImageView fitHeight="114.0" fitWidth="269.0" GridPane.columnSpan="2" GridPane.halignment="CENTER">
          <image>
             <Image url="@../Icons/HMS.png" />

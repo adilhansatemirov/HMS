@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox alignment="TOP_CENTER" prefHeight="395.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuGuests.ControllerAddTransaction">
+   <children>
+      <HBox>
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToInfo" prefHeight="0.0" prefWidth="0.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" opacity="0.4">
+                     <image>
+                        <Image url="@../Icons/left-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Label styleClass="labelFitnessConference" text="Fitness">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../Icons/exercise.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <HBox.margin>
+                  <Insets left="190.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#transactionChoise" prefHeight="30.0" prefWidth="200.0" text="Day  ticket/20$">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#transactionChoise" prefHeight="30.0" prefWidth="200.0" text="2 Days ticket/35$">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#transactionChoise" prefHeight="30.0" prefWidth="200.0" text="Week ticket/70$">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Button>
+      <Label styleClass="labelFitnessConference" text="Conference Hall">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="60.0">
+               <image>
+                  <Image url="@../Icons/presentation.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#transactionChoise" prefHeight="30.0" prefWidth="200.0" text="Hour reservation/50$">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+    <stylesheets>
+        <URL value="@styleGuestsInfo" />
+    </stylesheets>
+</VBox>

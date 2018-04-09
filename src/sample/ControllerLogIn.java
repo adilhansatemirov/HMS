@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,7 +27,7 @@ public class ControllerLogIn implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         if(this.modelLogIn.databaseIsConnected()){
             this.dbStatus.setText("Database connected");
-        }else {
+        }else{
             this.dbStatus.setText("Not connected");
         }
     }
@@ -46,10 +47,11 @@ public class ControllerLogIn implements Initializable {
     public void accessPermitted() throws Exception{
         Stage stage = new Stage();
         Parent home = FXMLLoader.load(getClass().getResource("FXML_CSS/MainPageHome.fxml"));
+        stage.getIcons().add(new Image("/HMS.png"));
 
         Scene sceneHome = new Scene(home, 950,600);
 
-        stage.setTitle("HMS");
+        stage.setTitle("HMS v1.0");
         stage.setScene(sceneHome);
         stage.setMinWidth(650);
         stage.setMinHeight(450);

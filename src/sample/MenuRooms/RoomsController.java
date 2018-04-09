@@ -39,6 +39,7 @@ public class RoomsController implements Initializable{
             "  AND RoomID = Room.Number AND spr_roomTypes.ID = Room.RoomTypeID \n" +
             "  ORDER BY RoomID;";
 
+
     public void loadRoomsData(){
         try {
             Connection connection = dbConnection.getConnection();
@@ -61,7 +62,7 @@ public class RoomsController implements Initializable{
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
-        roomChargeColumn.setCellValueFactory(new PropertyValueFactory<>("charge"));
+        roomChargeColumn.setCellValueFactory(new PropertyValueFactory<>("roomCharge"));
 
         tableRooms.setItems(null);
         tableRooms.setItems(dataOfRoom);

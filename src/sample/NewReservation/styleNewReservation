@@ -34,3 +34,13 @@
     -fx-background-color: #132227;
     -fx-text-fill: white;
 }
+.submitButton{
+    -fx-font-weight: bold;
+    -fx-font-size: 9pt;
+    -fx-background-radius: 0;
+    -fx-background-color: #6b8a82;
+    -fx-text-fill: #050c0c;
+}
+.submitButton: hover{
+    -fx-background-color: #525b56;
+}

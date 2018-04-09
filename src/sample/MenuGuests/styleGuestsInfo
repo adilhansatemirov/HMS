@@ -1,0 +1,36 @@
+.topLabel{
+    -fx-background-color: #050c0c;
+    -fx-text-fill: white;
+    -fx-font-size: 15pt;
+}
+.split-pane {
+    -fx-padding: 0 0 0 0;
+    -fx-background-color: #132227;
+}
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent;
+    -fx-background-color: #132227;
+}
+.button{
+    -fx-font-size: 12pt;
+    -fx-background-radius: 0;
+    -fx-background-color: #525b56;
+    -fx-text-fill: white;
+}
+.button: hover{
+    -fx-background-color: #858c93;
+}
+.labels{
+    -fx-font-size: 10.7pt;
+    -fx-text-fill: white;
+}
+.balanceLabel{
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+}
+.labelFitnessConference{
+    -fx-font-size: 12pt;
+}
+.backgroundTransaction{
+    -fx-background-color: #858c93;
+}
