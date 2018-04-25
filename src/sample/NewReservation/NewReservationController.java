@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample.NewReservation;
 
 import javafx.collections.FXCollections;
@@ -137,18 +142,21 @@ public class NewReservationController implements Initializable {
         }
 
         //DATE OF ARRIVAL FIELD
+        //31.05.2018
         String dateOfArrival = dateOfArrivalPicker.getEditor().getText();
         if (dateOfArrivalPicker.getEditor().getText().isEmpty()) {
             dateStatus.setText("Enter the date of arrival");
             conditionToSubmit = false;
-        } else if (!(dateOfArrival.length() == 10 && (Integer.parseInt(dateOfArrival.substring(0, 2)) >= 1 && Integer.parseInt(dateOfArrival.substring(0, 2)) <= 31)
+        } else if (!(dateOfArrival.length() == 10
+                && ((Integer.parseInt(dateOfArrival.substring(0, 2)) >= 1 && Integer.parseInt(dateOfArrival.substring(0, 2)) <= 31))
                 && dateOfArrival.charAt(2) == '.'
-                && (Integer.parseInt(dateOfArrival.substring(3, 5)) >= 1 && Integer.parseInt(dateOfArrival.substring(3, 5)) <= 12)
+                && ((Integer.parseInt(dateOfArrival.substring(3, 5)) >= 1 && Integer.parseInt(dateOfArrival.substring(3, 5)) <= 12))
                 && dateOfArrival.charAt(5) == '.'
-                && (Integer.parseInt(dateOfArrival.substring(6)) >= 2018 && Integer.parseInt(dateOfArrival.substring(6)) <= 2022)
+                && ((Integer.parseInt(dateOfArrival.substring(6)) >= 2018 && Integer.parseInt(dateOfArrival.substring(6)) <= 2022))
                 && dateOfArrival.substring(6).length() == 4)){
             dateStatus.setText("");
             dateStatus.setText("format: 22.05.2018");
+            dateOfArrivalPicker.getEditor().clear();
             conditionToSubmit = false;
         }
 
@@ -157,13 +165,13 @@ public class NewReservationController implements Initializable {
         if (timeOfArrivalFiled.getText().isEmpty()) {
             timeStatus.setText("Enter the time of arrival");
             conditionToSubmit = false;
-        } else if (!(Pattern.matches("[0-9]+",timeOfArrivalFiled.getText().substring(0, 2)) &&
+        } else if (!(timeOfArrivalFiled.getText().length()==5 &&
+                Pattern.matches("[0-9]+",timeOfArrivalFiled.getText().substring(0, 2)) &&
                 (Pattern.matches("[0-9]+",timeOfArrivalFiled.getText().substring(3)) &&
                 (Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) >= 0 &&
                 Integer.parseInt(timeOfArrivalFiled.getText().substring(0, 2)) <= 23 &&
                 Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) >= 0 &&
                 Integer.parseInt(timeOfArrivalFiled.getText().substring(3)) <= 59 &&
-                timeOfArrivalFiled.getText().length() == 5 &&
                 timeOfArrivalFiled.getText().charAt(2) == ':')))) {
             timeStatus.setText("");
             timeStatus.setText("format: 00:00");
@@ -221,7 +229,8 @@ public class NewReservationController implements Initializable {
             conditionToSubmit = false;
             dateOfExpireStatus.setText("");
             dateOfExpireStatus.setText("Input date");
-        } else if ((!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(0, 2))) ||
+        } else if (dateOfExpireField.getText().length()!=5 ||
+                (!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(0, 2))) ||
                 (!Pattern.matches("[0-9]+", dateOfExpireField.getText().substring(3))) ||
                 !(Integer.parseInt(dateOfExpireField.getText().substring(0, 2)) >= 1 && Integer.parseInt(dateOfExpireField.getText().substring(0, 2)) <= 12) ||
                 (Integer.parseInt(dateOfExpireField.getText().substring(3)) <= 18) || (dateOfExpireField.getText().length() != 5) ||
@@ -371,7 +380,7 @@ public class NewReservationController implements Initializable {
                 roomFree.add(resultSetOfRooms.getString(2));
             }
 
-            //GO THROUGH ALL THE ROOMS
+            //GO THROUGH ALL INDEXES OF THE ROOMS
             for (int room = 0; room < roomFree.size(); room++) {
                 //IF IT IS FREE WE GET THIS ROOM FROM ARRAYLIST AND CHANGE IT'S COLOR TO GREEN
                 if (roomFree.get(room).equals("yes")) {

@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample;
 
 import javafx.fxml.FXMLLoader;
@@ -13,13 +18,21 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ControllerHome implements Initializable{
     public BorderPane borderPane;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            setSceneHome();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void setSceneGuests() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MenuGuests/ViewGuest.fxml"));
@@ -36,6 +49,22 @@ public class ControllerHome implements Initializable{
     public void setSceneTransactions() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MenuTransactions/Transactions.fxml"));
         borderPane.setCenter(root);
+    }
+    public static Stage stageManual;
+    public void manual() throws IOException{
+        stageManual = new Stage();
+        stageManual.setMinWidth(610);
+        stageManual.setMaxWidth(610);
+        stageManual.setMinHeight(435);
+        stageManual.setMaxHeight(435);
+        stageManual.getIcons().add(new Image("/HMS.png"));
+        Parent root = FXMLLoader.load(getClass().getResource("Manual/ManualFirst.fxml"));
+        Scene scene = new Scene(root);
+        stageManual.setScene(scene);
+        stageManual.setTitle("Manual");
+        stageManual.initModality(Modality.APPLICATION_MODAL);
+        stageManual.setResizable(false);
+        stageManual.show();
     }
     public void notAvailable(){
         Stage stage = new Stage();
@@ -87,16 +116,6 @@ public class ControllerHome implements Initializable{
             stage.show();
         }catch (IOException e) {
             System.out.println("File not found");
-        }
-    }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        try {
-            setSceneHome();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

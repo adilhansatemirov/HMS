@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample.MenuTransactions;
 
 import javafx.collections.FXCollections;
@@ -43,13 +48,13 @@ public class TransactionController implements Initializable {
 
     private dbConnection dataBaseConnection;
     private ObservableList<ModelTransaction> dataTransaction;
-    private String sqlTransaction = "SELECT * FROM ListTransaction";
 
     public void loadTransaction() {
         try {
             Connection connection = dbConnection.getConnection();
             dataTransaction = FXCollections.observableArrayList();
 
+            String sqlTransaction = "SELECT * FROM ListTransaction";
             ResultSet resultSetTransaction = connection.createStatement().executeQuery(sqlTransaction);
             while (resultSetTransaction.next()) {
                 dataTransaction.add(new ModelTransaction(resultSetTransaction.getString(1),

@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample;
 
 import javafx.application.Application;
@@ -9,6 +14,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application{
 
+    //WE START APPLICATION BY LOADING LOGIN PAGE
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent home = FXMLLoader.load(getClass().getResource("FXML_CSS/LogIn.fxml"));
@@ -25,5 +31,4 @@ public class Main extends Application{
     public static void main(String[] args) {
         launch(args);
     }
-
 }

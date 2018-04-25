@@ -1,0 +1,17 @@
+.AnchorPane{
+    -fx-background-color: #132227;
+}
+.labelFirstPage{
+    -fx-font-size: 30pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.button{
+    -fx-font-size: 12pt;
+    -fx-background-radius: 0;
+    -fx-background-color: #050c0c;
+    -fx-text-fill: white;
+}
+.button: hover{
+    -fx-background-color: #525b56;
+}

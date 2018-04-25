@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="415.0" prefWidth="615.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manual.ManualWFourthController">
+   <children>
+      <Button layoutX="512.0" layoutY="347.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="79.0" text="Next" />
+      <Label layoutX="14.0" layoutY="339.0" prefHeight="58.0" prefWidth="490.0" styleClass="labelFirstPage" text="Double click on any guest" />
+      <ImageView fitHeight="317.0" fitWidth="547.0" layoutX="27.0" layoutY="14.0">
+         <image>
+            <Image url="@Pictures/4.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@styleManual" />
+   </stylesheets>
+</AnchorPane>

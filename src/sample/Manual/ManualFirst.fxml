@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="400.0" prefWidth="615.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manual.ManualFirstController">
+   <children>
+      <ImageView fitHeight="365.0" fitWidth="221.0" layoutX="14.0" layoutY="21.0">
+         <image>
+            <Image url="@Pictures/1.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="239.0" prefHeight="188.0" prefWidth="361.0" styleClass="labelFirstPage" text="Choose section to " />
+      <Button fx:id="buttonNext" layoutX="300.0" layoutY="343.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="239.0" text="Next" />
+      <Label alignment="TOP_CENTER" layoutX="240.0" layoutY="200.0" prefHeight="17.0" prefWidth="354.0" styleClass="labelFirstPage" text="control here" />
+   </children>
+   <stylesheets>
+      <URL value="@styleManual" />
+   </stylesheets>
+</AnchorPane>

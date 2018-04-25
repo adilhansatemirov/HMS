@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample.MenuHome;
 
 import javafx.collections.FXCollections;
@@ -51,7 +56,6 @@ public class HomeController implements Initializable{
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setResizable(false);
             stage.show();
-            //ControllerGuest.stage.setScene(scene);
         } catch (IOException e) {
             System.out.println("File not found");
         }
@@ -89,12 +93,12 @@ public class HomeController implements Initializable{
         }catch (SQLException e){
             System.err.println("Error" + e);
         }
-        this.nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        this.surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
-        this.contactNumberColumn.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        surnameColumn.setCellValueFactory(new PropertyValueFactory<>("surname"));
+        contactNumberColumn.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
 
-        this.tableGuests.setItems(null);
-        this.tableGuests.setItems(dataOfGuest);
+        tableGuests.setItems(null);
+        tableGuests.setItems(dataOfGuest);
     }
     public void loadTransactionsData(){
         try {

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="415.0" prefWidth="615.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manual.ManualThirdController">
+   <children>
+      <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="318.0" layoutY="14.0" prefHeight="185.0" prefWidth="277.0" styleClass="labelFirstPage" text="Fill in the data" />
+      <Button layoutX="327.0" layoutY="316.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="239.0" text="Next" />
+      <Label alignment="TOP_CENTER" layoutX="327.0" layoutY="185.0" prefHeight="48.0" prefWidth="239.0" styleClass="labelFirstPage" text="and click" />
+      <ImageView fitHeight="243.0" fitWidth="306.0" layoutX="6.0" layoutY="84.0">
+         <image>
+            <Image url="@Pictures/3.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="367.0" layoutY="233.0" styleClass="labelFirstPage" text="'Submit'" />
+   </children>
+   <stylesheets>
+      <URL value="@styleManual" />
+   </stylesheets>
+</AnchorPane>

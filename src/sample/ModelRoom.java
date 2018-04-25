@@ -1,11 +1,16 @@
 package sample;
-
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class ModelRoom {
+    //PROPERTIES OF THE ROOM WE WANT TO DISPLAY
     private final IntegerProperty roomNumber;
     private final StringProperty name;
     private final StringProperty surname;

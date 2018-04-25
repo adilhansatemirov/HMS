@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample.MenuGuests;
 
 import javafx.collections.FXCollections;
@@ -89,7 +94,7 @@ public class ControllerAddTransaction {
         vBox.getChildren().addAll(paymentMethod,hBox);
         vBox.setStyle("-fx-background-color: #132227;");
 
-        Scene scene = new Scene(vBox,265,65);
+        Scene scene = new Scene(vBox,260,71);
         stage.setScene(scene);
 
         stage.setTitle("Remove guest");
@@ -98,7 +103,7 @@ public class ControllerAddTransaction {
         stage.show();
 
 
-//USER PAY WITH CREDIT CARD******************************************************************************************
+//USER PAYS WITH CREDIT CARD******************************************************************************************
         String sqlUpdateBalance = "UPDATE Client SET CurrentBalance = ? WHERE Name = ? AND Surname = ?";
         String sqlGetPrice = "SELECT Price FROM TableTransaction WHERE ID = "+typeID;
 

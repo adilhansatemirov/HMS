@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample;
 
 import javafx.beans.property.SimpleStringProperty;
@@ -6,8 +11,7 @@ import javafx.beans.property.StringProperty;
 import java.util.HashMap;
 
 public class ModelGuest {
-    //CLASS THAT CONTAINS ATTRIBUTES OF GUEST
-    //CONNECTED TO DATABASE
+    //CLASS THAT IS USED TO RETRIEVE DATA FROM DATABASE
 
     //ATTRIBUTES
     private final StringProperty ID;
@@ -47,6 +51,9 @@ public class ModelGuest {
     *   13: yearOfExpire
     *   14: currentBalance
 */
+
+    //ONCE WE CREATED NEW GUEST, IN THE CONSTRUCTOR WE PASS VALUES THAT WE GOT FROM DATABASE.
+    //THEN WE ASSIGN ATTRIBUTES TO THE VALUES THAT WE WANT TO USE
     public ModelGuest(String ID, String name, String surname, String timeOfArrival,
                       String nightsToStay, String passport, String takeFrom, String contactNumber,
                       String roomID, String creditCardNumber, String CVV, String monthOfExpire,
@@ -67,21 +74,21 @@ public class ModelGuest {
         this.currentBalance = new SimpleStringProperty(currentBalance);
         this.timeOfDeparture = new SimpleStringProperty(timeOfDeparture(nightsToStay));
     }
-    //2018-03-15 00:00:00.000
 
-    //00:00:00 15:December:2018
-
+    //FORMAT OF TIME THAT WE RECEIVE: 2018-03-15 00:00:00.000
+    //FORMAT OF TIME THAT WE NEED: 00:00:00 15:December:2018
     public String timeOfDeparture(String nightsToStay){
         int day = (dayOfDeparture + Integer.parseInt(nightsToStay));
         if(day>30)
             monthOfDeparture++;
         day = day%30;
+        String zero = "";
         if(day<10) {
-            return "0" + day + ":" + numberMonthMap.get(monthOfDeparture)+":"+ yearOfDeparture;
-        } else{
-            return day + ":" + numberMonthMap.get(monthOfDeparture)+":"+ yearOfDeparture;
+            zero = "0";
         }
+        return zero + day + ":" + numberMonthMap.get(monthOfDeparture)+":"+ yearOfDeparture;
     }
+    //this method
     //2018-03-15 00:00:00.000
     public String customizedDate(String dateTime){
         fillMap();

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="415.0" prefWidth="615.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manual.ManualSecondController">
+   <children>
+      <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="292.0" layoutY="14.0" prefHeight="185.0" prefWidth="308.0" styleClass="labelFirstPage" text="To add a guest" />
+      <Button layoutX="327.0" layoutY="308.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="239.0" text="Next" />
+      <Label alignment="TOP_CENTER" layoutX="296.0" layoutY="190.0" prefHeight="48.0" prefWidth="300.0" styleClass="labelFirstPage" text="click here" />
+      <ImageView fitHeight="302.0" fitWidth="278.0" layoutX="22.0" layoutY="49.0">
+         <image>
+            <Image url="@Pictures/2.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@styleManual" />
+   </stylesheets>
+</AnchorPane>

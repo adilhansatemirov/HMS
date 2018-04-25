@@ -1,3 +1,8 @@
+/*Author's information
+* Author: Adilkhan Satemirov
+* Email: adilkhansatemirovv@gmail.com
+* Phone number: 8(775)216-01-56
+*/
 package sample;
 
 import java.sql.Connection;
@@ -38,7 +43,7 @@ class ModelLogIn {
         String sqlRequest = "SELECT * from LogIn where Username = ? and Password = ?";
 
         try {
-            statement = this.connection.prepareStatement(sqlRequest);
+            statement = connection.prepareStatement(sqlRequest);
             statement.setString(1, user);
             statement.setString(2, password);
 

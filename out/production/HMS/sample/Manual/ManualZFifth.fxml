@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="415.0" prefWidth="615.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Manual.ManualZFifthController">
+   <children>
+      <Button layoutX="425.0" layoutY="342.0" mnemonicParsing="false" onAction="#close" prefHeight="46.0" prefWidth="163.0" text="Close" />
+      <Label layoutX="26.0" layoutY="307.0" prefHeight="58.0" prefWidth="383.0" styleClass="labelFirstPage" text="Get info and control" />
+      <ImageView fitHeight="281.0" fitWidth="360.0" layoutX="120.0" layoutY="14.0">
+         <image>
+            <Image url="@Pictures/5.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="350.0" prefHeight="58.0" prefWidth="406.0" styleClass="labelFirstPage" text="transactions of guest" />
+   </children>
+   <stylesheets>
+      <URL value="@styleManual" />
+   </stylesheets>
+</AnchorPane>
